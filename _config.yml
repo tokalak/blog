@@ -3,4 +3,6 @@ author: Ahmet T
 description: We blog about IT topics
 remote_theme: mmistakes/minimal-mistakes@4.26.2
 plugins:
+- jekyll-include-cache
 - jekyll-remote-theme # add this line to the plugins list if you already have one
+
