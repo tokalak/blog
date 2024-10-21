@@ -2,3 +2,5 @@ title: My Super Duper Blog
 author: Ahmet T
 description: We blog about IT topics
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+plugins:
+- jekyll-remote-theme
