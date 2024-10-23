@@ -8,7 +8,6 @@ tags:
   - Docker 
   - Security
   - DevOps
-toc: true
 classes: wide
 ---
 
@@ -20,9 +19,9 @@ Given the `Dockerfile` below:
 FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/index.html
 ```
-We're basing our docker image on base image `nginx:alphine`.  
+We're basing our docker image on the base image `nginx:alphine`.  
 It could be that some of the tools and packages contained in that pre-built image have security issues.  
-To be sure that the image is safe to use from a security perspectiv, we'd to check all contained packages for Common Vulnerabilities and Exposures (CVEs).
+To be sure that the image is safe to use from the security perspective, we'd to check all contained packages for Common Vulnerabilities and Exposures (CVEs).
 Doing that by hand is a lot of work - almost not possible.
 
 ## Available Tools 
@@ -87,7 +86,7 @@ You could decide to add the update statements into the Dockerfile and then conti
 It's also possible to create a new secure docker base image, push it to a repository and base all your docker images on that secure base image.
 That base image should also be scanned. 
 
-Some vulnerabilities could require a different set of actions like tweaking some configurations etc. You should check the referenced CVE page for details.
+Some vulnerabilities could require a different set of actions like tweaking some configurations etc. You should check the referenced CVE links for details.
 The issues we talked so far are dealing with vulnerabilities in the base image. 
 New issues could be introduced by downloading binaries in the `Dockerfile` or used libraries in the source code. There are tools to help with this issues.
 
