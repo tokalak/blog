@@ -16,7 +16,7 @@ classes: wide
 Usually all docker images are based on a root image. 
 Given the `Dockerfile` below:
 
-```yaml
+```yml
 FROM nginx:alpine
 COPY index.html /usr/share/nginx/html/index.html
 ```
@@ -49,7 +49,7 @@ I'll use `brew` to install it.
 $ brew install trivy
 ```
 
-Scan the image:
+If trivy scans the image, then it checks the packages against its database and displays any findings in a formatted table:
 
 ```bash
 $ trivy image nginx:alpine
@@ -67,6 +67,33 @@ nginx:alpine (alpine 3.20.3)
 Total: 2 (UNKNOWN: 0, LOW: 2, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
 ```
 ![trivy scan result](/blog/assets/images/trivy-scan-result.png)
+
+It's a good idea to store the result for documentation purposes.  
+
+## Revew the Results
+If any vulnerabilites are reported, then each of them should be checked and categorized.  
+Please note that some vulnerabilities might not be sever and can be safely ignored. Some of them could be not relevant for your environment and use case.  
+Your decisions should be recorded too. 
+
+## Fix Vulnerabilities
+The easiest ways to fix the issues could be just updating the packages.
+
+```yml
+FROM nginx:alpine
+RUN apk update && apk upgrade --available
+...
+```
+You could decide to add the update statements into the Dockerfile and then continue with configuring the docker image. 
+It's also possible to create a new secure docker base image, push it to a repository and base all your docker images on that secure base image.
+That base image should also be scanned. 
+
+Some vulnerabilities could require a different set of actions like tweaking some configurations etc. You should check the referenced CVE page for details.
+The issues we talked so far are dealing with vulnerabilities in the base image. 
+New issues could be introduced by downloading binaries in the `Dockerfile` or used libraries in the source code. There are tools to help with this issues.
+
+## References
+[Supply Chain Vulnerabilities](https://owasp.org/www-project-kubernetes-top-ten/2022/en/src/K02-supply-chain-vulnerabilities)
+
 
 
 
