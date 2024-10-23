@@ -8,6 +8,8 @@ tags:
   - Docker 
   - Security
   - DevOps
+toc: true
+classes: wide
 ---
 
 # Docker Image Hardening?
