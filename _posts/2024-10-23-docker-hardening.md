@@ -64,7 +64,7 @@ nginx:alpine (alpine 3.20.3)
 
 Total: 2 (UNKNOWN: 0, LOW: 2, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
 ```
-![trivy scan result](images/trivy-scan-result.png)
+![trivy scan result](blog/assets/images/trivy-scan-result.png)
 
 
 
