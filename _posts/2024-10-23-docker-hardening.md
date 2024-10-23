@@ -46,13 +46,13 @@ It can scan:
 The installation is very easy for my setup. Please check the project site for the installation guide, which is more appropriate for you.    
 I'll use `brew` to install it. 
 ```bash
- brew install trivy
+$ brew install trivy
 ```
 
 Scan the image:
 
 ```bash
- trivy image nginx:alpine
+$ trivy image nginx:alpine
 2024-10-23T11:20:48+03:00	INFO	[vuln] Vulnerability scanning is enabled
 2024-10-23T11:20:48+03:00	INFO	[secret] Secret scanning is enabled
 2024-10-23T11:20:48+03:00	INFO	[secret] If your scanning is slow, please try '--scanners vuln' to disable secret scanning
