@@ -7,6 +7,7 @@ categories:
 tags:
   - Python
   - Converter
+  - AI
 ---
 
 # How To Convert Image To Text On Your Local Machine?
