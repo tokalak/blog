@@ -14,7 +14,7 @@ tags:
 
 In the last weeks I found myself converting images to text very often. For that task I did mainly use AI tools like [ChatGPT](https://chatgpt.com) or [Claude](https://claude.ai). As you may know using these tools is with costs. They come with a free plan, which is limited to several requests per day. 
 
-That's way I did want to have a tool to be available on my machine, which could carry out that task. It should be able to process the image copied to the clipboard, which would make the usage of the tool very handy.
+That's way I did want to have a tool available on my machine, which can carry out that task. It should be able to process the image copied to the clipboard, which would make the usage of the tool very handy.
 
 The good news is that there are free Python libraries available, allowing to implement this tool very easily.
 
