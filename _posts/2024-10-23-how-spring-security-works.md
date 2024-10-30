@@ -41,7 +41,7 @@ In case the requirements are met, the filter does its job, then calls back the f
 
 If the request is not valid or not allowed from the perspective of the filter, then it manipulates the HTTP response object - e.g. sets status code and error messages - and does not call the filter chain anymore. As a result, the remaing filters in the chain are not called and the HTTP response object is sent to the client.
 
-![Security Filter Chain](/blog/assets/images/spring/security-filter-chain.png)
+![Security Filter Chain](/blog/assets/images/spring/security/security-filter-chain.png)
 
 ## FilterChain
 
@@ -49,11 +49,11 @@ The filter chain contains all registered filters. It traverses the filters and c
 
 As a consequence the stack trace would look like:
 
-![Filter Chain](/blog/assets/images/spring/security-filter-chain-impl.png)
+![Filter Chain](/blog/assets/images/spring/security/security-filter-chain-impl.png)
 
 
 The stack trace would look like:  
-![FC Stack Trace](/blog/assets/images/spring/filter-chain-stack-trace.png)
+![FC Stack Trace](/blog/assets/images/spring/security/filter-chain-stack-trace.png)
 
 ## Authentication
 
@@ -103,7 +103,7 @@ You can create a custom `AuthenticationProvider` by implementing that interface.
 
 The easiest way to create a Spring Boot application is to use the Spring Initializer web application `https://start.spring.io`. You can use the language and language version, build tool and the dependencies: 
 
-![Spring Initializer](/blog/assets/images/spring/spring-initializer.png)
+![Spring Initializer](/blog/assets/images/spring/security/spring-initializer.png)
 
 You can also create a Spring Boot application in IntelliJ very easily. 
 
