@@ -12,7 +12,7 @@ tags:
 classes: wide
 ---
 
-# Spring Security Architecture Overview
+# Spring Security Overview
 
 Spring Security helps with the following use cases:
 
@@ -85,7 +85,7 @@ The `SecurityContext` can also be injected into a controller method.
 
 Converts a not authenticated `Authentication` object into an authenticated one:
 
-![Authentication Manager](/blog/assets/images/spring/authentication-manager.png)
+![Authentication Manager](/blog/assets/images/spring/security/authentication-manager.png)
 
 
 ## AuthenticationProvider
