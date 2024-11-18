@@ -57,7 +57,7 @@ Click on `Add visualization`. The new page requires you to select a `data source
 
 ![Grafana New Panel](/blog/assets/images/grafana-new-panel.png)
 
-From the `Metric` drop down box we select our custom metric `home_temperature_in_celcius`, which we did create in a previous [post](/prometheus/prometheus-intro): 
+From the `Metric` drop down box we select our custom metric `home_temperature_in_celcius`, which we did create in a previous [post](/blog/prometheus/prometheus-intro): 
 
 ![Grafana Panel - Custom Metric](/blog/assets/images/grafana-panel-select-metric.png)
 
