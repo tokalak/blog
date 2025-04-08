@@ -9,7 +9,7 @@ tags:
 classes: wide
 ---
 
-It seems strange that you need to provide a base image in a Dockerfile when building your custom docker image, even though 
+It seems strange that you need to provide a base image in a Dockerfile when defining your custom docker image, even though 
 Docker is run on a Linux operating system. Why do I need to specify a base image then?
 
 Docker uses technics like `namespaces` and `cgroups` provided by Linux to isolate docker `containers` (running instances of docker `images`) from each other and from the host operating system.
