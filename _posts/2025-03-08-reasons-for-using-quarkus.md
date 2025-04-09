@@ -99,6 +99,54 @@ $ quarkus dev
 ```
 To verify it, e.g. just change a source file and reload your it in the browser. You should see console logs iny your terminal informing about the reoload. You can also trigger a reload in the terminal by pressing the **`s`** key.
 
+### Dev UI
+
+Dev UI is a tool with a Web UI. Its gives you insights about your application when it runs in Dev mode.
+You can interact with it and even change its state.
+
+It visualizes some framework level abstractions that your app is using. 
+You can use it like a debugger to gain insight into your app. 
+
+Using Dev UI you can accomplish things like: 
+
+- List all configuration keys and values (this can be invaluable, especially
+if you have multiple sources of configuration that supply different
+values for the same keys)
+
+- List all CDI beans in the application, and for each of them, list their
+associated interceptors and priorities
+
+- List CDI beans detected during the build as unused, therefore not
+included in the resulting application
+
+- List JPA entities along with their mapping to database tables.
+- Wipe data from a development database to be able to start from
+scratch
+- If you are using the Scheduler extension to schedule periodic tasks, you can manually trigger a task’s execution outside the schedule
+- Re-run unit tests with a single click
+- View reports from completed test runs
+
+The architecture allows each Quarkus extension separately to plug its own tools into the
+Dev UI, so the complete list of options depends on which extensions the Quarkus
+application includes.
+
+You can navigate to the DEV UI by opening the URL http://localhost:8080/q/dev-ui in your browser.
+You can also open the DEV UI automatically if you run your app in DEV mode and press the **`d`** key in the terminal.
+The screenshot below shows the Dev UI with the extension panel open, which show all installed extensions:
+
+![Quarkus Dev UI](/blog/assets/images/quarkus-dev-ui.png)
+
+### Dev Services
+
+Using external services like message brokers and databases is very easy in Quarkus. Quarkus runs and manages such services for you automatically in **Dev** or **Test** mode, if following requirements are met:
+- A container environment is available (Docker or Podman)
+- Your service supports Dev Services
+- You don't provide any configuration to your service
+
+If the above requirements are fulfilled, Quarkus will try to run an instance of that service (usually using Testcontainers) and take care of wiring it with your application. 
+ 
+Your can learn more about Dev services and supported services at [Quarkus Dev Services](https://quarkus.io/guides/dev-services).
+
 ## Great Ecosystem & Docs
 [Docs & Guides](https://quarkus.io/guides). Particularly the [SmallRye](https://smallrye.io/) project needs a to be mentioned as it implements the [Microprofile](https://microprofile.io/specifications/) and other useful APIs.
 
