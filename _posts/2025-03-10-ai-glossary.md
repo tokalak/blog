@@ -1,5 +1,5 @@
 ---
-title: "Glossary"
+title: "AI Glossary"
 last_modified_at: 2025-04-10T00:00:00-00:00
 categories:
   - Glossary
