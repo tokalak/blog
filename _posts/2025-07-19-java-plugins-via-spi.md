@@ -1,5 +1,5 @@
 ---
-title: "Java Service Provider Interface (SPI)"
+title: "How to Make Your Java Application Extensible Through Plugins?"
 last_modified_at: 2025-07-19T11:00:00-00:00
 categories:
   - Blog
@@ -7,8 +7,6 @@ tags:
   - Java
 classes: wide
 ---
-
-# How to Make Your Java Application Extensible Through Plugins
 
 The easiest way to enable extensibility in your Java application via plugins is by using the **Service Provider Interface (SPI)**. This functionality has been built into Java since version 6 and is widely adopted by popular frameworks and libraries such as Spring and Maven.
 
