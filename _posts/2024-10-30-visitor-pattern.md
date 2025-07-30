@@ -100,7 +100,7 @@ public class Demo {
   public static void main(String[] args){
     var fuel = new FuelVisitor();
     
-    new TraditionalCar().accept(fuel)
+    new TraditionalCar().accept(fuel);
     new ElectricCar().accept(fuel);
   }
 }
@@ -129,9 +129,3 @@ That's where Data Oriented Programming comes into play.
 - [Visitor pattern](https://en.wikipedia.org/wiki/Visitor_pattern)
 - [Data Oriented Programming in Java](https://www.infoq.com/articles/data-oriented-programming-java)
 - [Source Code](https://github.com/tokalak/visitor-pattern-in-java)
-
-
-
-
-
-
