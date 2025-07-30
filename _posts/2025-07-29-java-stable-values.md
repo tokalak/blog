@@ -57,8 +57,8 @@ Here are multiple ways to rewrite the above code with stable values:
   }
 ```
 
-The Stable Values feature in Java 25 offers many helper classes and utility methods to simplify working with deferred immutable values. For example, you can have a list whose entries are **initialized lazily when first accessed** and then constant folded by the JVM. Similar implementations exist for maps, sets, and more. For full details, see the [JEP 502: Stable Values (Preview)][1].
+The Stable Values feature in Java 25 offers many helper classes and utility methods to simplify working with deferred immutable values. For example, you can have a list whose entries are **initialized lazily when first accessed** and then constant folded by the JVM. Similar implementations exist for maps, sets, and more. For details, see the references below.
 
 ## References
 
-[1]: https://openjdk.org/jeps/502 "JEP 502: Stable Values (Preview)"
+[https://openjdk.org/jeps/502](JEP 502: Stable Values (Preview))
